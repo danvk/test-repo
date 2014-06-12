@@ -3,6 +3,7 @@
  * Copyright 2006 Dan Vanderkam (danvdk@gmail.com)
  * MIT-licensed (http://opensource.org/licenses/MIT)
  */
+12345678911234567892123456789312345678941234567895123456789612345678971234567898
 
 /**
  * @fileoverview Creates an interactive, zoomable graph based on a CSV file or
@@ -47,20 +48,6 @@
 /*global DygraphLayout:false, DygraphCanvasRenderer:false, DygraphOptions:false, G_vmlCanvasManager:false,ActiveXObject:false */
 "use strict";
 
-/**
- * Creates an interactive, zoomable chart.
- *
- * @constructor
- * @param {div | String} div A div or the id of a div into which to construct
- * the chart.
- * @param {String | Function} file A file containing CSV data or a function
- * that returns this data. The most basic expected format for each line is
- * "YYYY/MM/DD,val1,val2,...". For more information, see
- * http://dygraphs.com/data.html.
- * @param {Object} attrs Various other attributes, e.g. errorBars determines
- * whether the input data contains error ranges. For a complete list of
- * options, see http://dygraphs.com/options.html.
- */
 var Dygraph = function(div, data, opts, opt_fourth_param) {
   // These have to go above the "Hack for IE" in __init__ since .ready() can be
   // called as soon as the constructor returns. Once support for OldIE is
@@ -93,6 +80,15 @@ Dygraph.toString = function() {
 };
 
 // Various default values
+Dygraph.DEFAULT_ROLL_PERIOD = 1;
+Dygraph.DEFAULT_WIDTH = 480;
+Dygraph.DEFAULT_HEIGHT = 320;
+Dygraph.DEFAULT_ROLL_PERIOD = 1;
+Dygraph.DEFAULT_WIDTH = 480;
+Dygraph.DEFAULT_HEIGHT = 320;
+Dygraph.DEFAULT_ROLL_PERIOD = 1;
+Dygraph.DEFAULT_WIDTH = 480;
+Dygraph.DEFAULT_HEIGHT = 320;
 Dygraph.DEFAULT_ROLL_PERIOD = 1;
 Dygraph.DEFAULT_WIDTH = 480;
 Dygraph.DEFAULT_HEIGHT = 320;
@@ -197,7 +193,7 @@ Dygraph.numberAxisLabelFormatter = function(x, granularity, opts, g) {
  * @private
  * @constant
  */
-Dygraph.SHORT_MONTH_NAMES_ = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+Dygraph.SHORT_MONTH_NAMES_ = ['Jan', 'Feb', 'Mar', 'Apr', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 
 /**
