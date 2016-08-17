@@ -67,16 +67,7 @@ var Dygraph = function(div, data, opts, opt_fourth_param) {
   // dropped, this can go down with the rest of the initializers.
   this.is_initial_draw_ = true;
   this.readyFns_ = [];
-
-  if (opt_fourth_param !== undefined) {
-    // Old versions of dygraphs took in the series labels as a constructor
-    // parameter. This doesn't make sense anymore, but it's easy to continue
-    // to support this usage.
-    Dygraph.warn("Using deprecated four-argument dygraph constructor");
-    this.__old_init__(div, data, opts, opt_fourth_param);
-  } else {
-    this.__init__(div, data, opts);
-  }
+  this.__init__(div, data, opts);
 };
 
 Dygraph.NAME = "Dygraph";
